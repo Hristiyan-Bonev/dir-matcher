@@ -17,11 +17,14 @@ def folder_lookup(folder_name):
     #highest_ratio_dir = (folders_ratios[max_coeff], max_coeff)
     #print(highest_ratio_dir)
     if float(max_coeff_value) < SIMILARITY_THRESHOLD:
-        sys.exit(1)
+        return None
     return max_coeff_dirname #folders_ratios[max_coeff_dirname])
 
 if __name__ == '__main__':
     n = sys.argv[1]
     result_folder = folder_lookup(n)
-    print(result_folder)
-    sys.exit(0)
+    if result_folder:
+        print(result_folder)
+        sys.exit(0)
+    else:
+        sys.exit(1)
