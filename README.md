@@ -1,7 +1,7 @@
 #Installation
 
 Add the following function to your ~/.bashrc or ~/.profile 
-
+```
 ccd(){
 folder="$1"
 script_path="PATH/TO/SCRIPT/cd.py"
@@ -18,6 +18,7 @@ if [ ! -z $folder ]
    echo "Please provide folder name"
 fi
 }
+```
 
 
 Make sure that you reload the ".bashrc" or ".profile" file, depending in which file you have added the function above.
